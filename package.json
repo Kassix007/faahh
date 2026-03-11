@@ -1,14 +1,38 @@
 {
-  "name": "error-sound-player",
-  "displayName": "Error Sound Player",
-  "description": "Plays a sound effect whenever new errors appear in the Problems pane.",
+  "name": "faahh",
+  "displayName": "Faahh",
+  "description": "Plays a sound when new errors appear in the VS Code Problems panel.",
   "version": "0.0.1",
-  "publisher": "local",
+  "publisher": "KishanlallKassinathdoss",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "icon": "icon.png",
+  "homepage": "https://github.com/Kassix007/faahh#readme",
+  "bugs": {
+    "url": "https://github.com/Kassix007/faahh/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kassix007/faahh.git"
+  },
   "engines": {
     "vscode": "^1.80.0"
   },
   "categories": [
     "Other"
+  ],
+  "keywords": [
+    "sound",
+    "errors",
+    "problems",
+    "notifications"
+  ],
+  "files": [
+    "out/**",
+    "effect.wav",
+    "icon.png",
+    "LICENSE.md",
+    "README.md",
+    "package.json"
   ],
   "activationEvents": [
     "onStartupFinished"
@@ -16,19 +40,19 @@
   "main": "./out/extension.js",
   "contributes": {
     "configuration": {
-      "title": "Error Sound Player",
+      "title": "Faahh",
       "properties": {
-        "errorSoundPlayer.enabled": {
+        "faahh.enabled": {
           "type": "boolean",
           "default": true,
-          "description": "Enable or disable error sound playback."
+          "description": "Enable or disable Faahh sound playback when new errors appear."
         }
       }
     },
     "commands": [
       {
-        "command": "errorSoundPlayer.toggle",
-        "title": "Error Sound Player: Toggle On/Off"
+        "command": "faahh.toggle",
+        "title": "Faahh: Toggle On/Off"
       }
     ]
   },
@@ -40,10 +64,6 @@
   "devDependencies": {
     "@types/node": "^18.0.0",
     "@types/vscode": "^1.80.0",
-    "ffmpeg-static": "^5.3.0",
     "typescript": "^5.0.0"
-  },
-  "dependencies": {
-    "play-sound": "^1.1.6"
   }
 }
