@@ -1,0 +1,49 @@
+{
+  "name": "error-sound-player",
+  "displayName": "Error Sound Player",
+  "description": "Plays a sound effect whenever new errors appear in the Problems pane.",
+  "version": "0.0.1",
+  "publisher": "local",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Error Sound Player",
+      "properties": {
+        "errorSoundPlayer.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable or disable error sound playback."
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "errorSoundPlayer.toggle",
+        "title": "Error Sound Player: Toggle On/Off"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/vscode": "^1.80.0",
+    "ffmpeg-static": "^5.3.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "play-sound": "^1.1.6"
+  }
+}
