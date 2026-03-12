@@ -6,5 +6,4 @@ src/**
 package-lock.json
 tsconfig.json
 .gitignore
-effect.mp3
 out/**/*.map

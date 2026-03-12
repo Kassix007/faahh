@@ -1,19 +1,11 @@
 {
   "name": "faahh",
   "displayName": "Faahh",
-  "description": "Plays a sound when new errors appear in the VS Code Problems panel.",
+  "description": "Notifies you when new errors appear in the VS Code Problems panel and can play audio from the Faahh audio panel.",
   "version": "0.0.1",
   "publisher": "KishanlallKassinathdoss",
   "license": "SEE LICENSE IN LICENSE.md",
   "icon": "icon.png",
-  "homepage": "https://github.com/Kassix007/faahh#readme",
-  "bugs": {
-    "url": "https://github.com/Kassix007/faahh/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Kassix007/faahh.git"
-  },
   "engines": {
     "vscode": "^1.80.0"
   },
@@ -22,9 +14,11 @@
   ],
   "keywords": [
     "sound",
+    "audio",
     "errors",
     "problems",
-    "notifications"
+    "notifications",
+    "diagnostics"
   ],
   "files": [
     "out/**",
@@ -45,14 +39,18 @@
         "faahh.enabled": {
           "type": "boolean",
           "default": true,
-          "description": "Enable or disable Faahh sound playback when new errors appear."
+          "description": "Enable or disable Faahh notifications when new errors appear."
         }
       }
     },
     "commands": [
       {
         "command": "faahh.toggle",
-        "title": "Faahh: Toggle On/Off"
+        "title": "Faahh: Toggle Alerts"
+      },
+      {
+        "command": "faahh.openAudioPanel",
+        "title": "Faahh: Open Audio Panel"
       }
     ]
   },
