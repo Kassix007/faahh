@@ -6,6 +6,14 @@
   "publisher": "KishanlallKassinathdoss",
   "license": "SEE LICENSE IN LICENSE.md",
   "icon": "icon.png",
+  "homepage": "https://github.com/Kassix007/faahh#readme",
+  "bugs": {
+    "url": "https://github.com/Kassix007/faahh/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kassix007/faahh.git"
+  },
   "engines": {
     "vscode": "^1.80.0"
   },
